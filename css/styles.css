@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.gridContainer {
+  /* max-width: 1200px;
+  margin: 0 auto; */
+
+  display: grid;
+
+  /* template - явная сетка */
+  grid-template-rows: 100vh auto auto auto; /* высоты строк явной сетки */
+  grid-template-columns: repeat(3, 1fr); /* ширины столбцов явной сетки */
+
+  /* auto - неявная сетка */
+  grid-auto-rows: 200px; /* высоты строк неявной сетки */
+  grid-auto-columns: 100px; /* ширины столбцов неявной сетки */
+  grid-auto-flow: row; /* направление, в котором будут смещаться грид-чайлды в неявной сетке */
+}
+.gridContainer > div {
+  border: 5px solid green;
+  background-color: coral;
+  /* width: 150px;
+  height: 150px; */
+}
+
+.gridChild1,
+.gridChild2,
+.gridChild3 {
+  grid-column: 1/4;
+}
